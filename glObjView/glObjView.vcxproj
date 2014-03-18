@@ -58,8 +58,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glew32.lib;SDL_image.lib;sdl2.lib;sdl2main.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\Devel\SDL2_image\lib\x86;D:\Devel\glew-1.10.0\lib\Release\Win32;D:\Devel\sdl2\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;SDL2_image.lib;sdl2.lib;sdl2main.lib;opengl32.lib;sdl2main.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Devel\SDL2_image\lib\x86\;D:\Devel\glew-1.10.0\lib\Release\Win32;D:\Devel\sdl2\lib\x86</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /Y "$(ProjectDir)*.dll" "$(OutputPath)"
@@ -73,7 +73,7 @@ xcopy /Y "$(ProjectDir)resources\*" "$(OutputPath)resources\"</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -85,34 +85,53 @@ xcopy /Y "$(ProjectDir)resources\*" "$(OutputPath)resources\"</Command>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>glew32.lib;SDL_image.lib;sdl2.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\Devel\SDL2_image\lib\x86;D:\Devel\glew-1.10.0\lib\Release\Win32;D:\Devel\sdl2\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;SDL2_image.lib;sdl2.lib;sdl2main.lib;opengl32.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Devel\SDL2_image\lib\x86\;D:\Devel\glew-1.10.0\lib\Release\Win32;D:\Devel\sdl2\lib\x86</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="LICENSE.jpeg.txt" />
+    <Text Include="LICENSE.png.txt" />
+    <Text Include="LICENSE.tiff.txt" />
+    <Text Include="LICENSE.webp.txt" />
+    <Text Include="LICENSE.zlib.txt" />
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="i_displayobject.h" />
-    <ClInclude Include="main.h" />
-    <ClInclude Include="renderer.h" />
-    <ClInclude Include="rendercontext.h" />
-    <ClInclude Include="scene.h" />
-    <ClInclude Include="shader.h" />
-    <ClInclude Include="sprite.h" />
-    <ClInclude Include="targetver.h" />
-    <ClInclude Include="texture.h" />
+    <ClInclude Include="src\background.h" />
+    <ClInclude Include="src\demoscene.h" />
+    <ClInclude Include="src\i_displayobject.h" />
+    <ClInclude Include="src\emitter.h" />
+    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\renderer.h" />
+    <ClInclude Include="src\rendercontext.h" />
+    <ClInclude Include="src\scene.h" />
+    <ClInclude Include="src\shader.h" />
+    <ClInclude Include="src\sprite.h" />
+    <ClInclude Include="src\targetver.h" />
+    <ClInclude Include="src\texture.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="renderer.cpp" />
-    <ClCompile Include="rendercontext.cpp" />
-    <ClCompile Include="scene.cpp" />
-    <ClCompile Include="shader.cpp" />
-    <ClCompile Include="sprite.cpp" />
-    <ClCompile Include="texture.cpp" />
+    <ClCompile Include="src\background.cpp" />
+    <ClCompile Include="src\demoscene.cpp" />
+    <ClCompile Include="src\emitter.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\renderer.cpp" />
+    <ClCompile Include="src\rendercontext.cpp" />
+    <ClCompile Include="src\scene.cpp" />
+    <ClCompile Include="src\shader.cpp" />
+    <ClCompile Include="src\sprite.cpp" />
+    <ClCompile Include="src\texture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="freeglut.dll" />
+    <None Include="glew32.dll" />
+    <None Include="libjpeg-9.dll" />
+    <None Include="libpng16-16.dll" />
+    <None Include="libtiff-5.dll" />
+    <None Include="libwebp-4.dll" />
+    <None Include="SDL2.dll" />
+    <None Include="SDL2_image.dll" />
     <None Include="shaders\shadowblend.frag" />
     <None Include="shaders\shadowgen.frag" />
     <None Include="shaders\shadowgen.geom" />
@@ -120,9 +139,11 @@ xcopy /Y "$(ProjectDir)resources\*" "$(OutputPath)resources\"</Command>
     <None Include="shaders\shadowgen.vert" />
     <None Include="shaders\sprite.frag" />
     <None Include="shaders\sprite.vert" />
-    <None Include="shaders\sprite_normalmap.frag" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="resources\color_cone64x64.png" />
+    <Image Include="resources\cracked_c.png" />
+    <Image Include="resources\cracked_n.png" />
     <Image Include="resources\nm_cone64x64.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

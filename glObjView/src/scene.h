@@ -5,6 +5,7 @@
 #include <vector>
 
 #include "i_displayobject.h"
+#include "emitter.h"
 #include "rendercontext.h"
 
 namespace sp {
@@ -19,16 +20,21 @@ namespace sp {
 
         void Initialize();
         void Load();
-        void Update(float dt);
+        virtual void Update(float dt);
         void Dispose();
 
         //TODO: void GenerateOcclusionGeometry(); and 
         
         void BeginDraw();
         void DrawColorLayer(const RenderContext &c);
-        void DrawNormalLayer(const RenderContext &c);
+        void DrawShadowLayer(const RenderContext &c);
+    protected:
+        vector<IDisplayObject*> objects;
+        vector<Emitter *> lights;
 
     private:
-        vector<IDisplayObject*> objects;
+        ///Sorts the emitters by brightness at a given point.
+        void sortEmitters(const glm::vec2& point);
+        void bindLights(const RenderContext& rc) const;
     };
 }

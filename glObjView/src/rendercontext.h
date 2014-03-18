@@ -14,16 +14,18 @@ namespace sp {
         RenderContext(GLuint program) : activeProgram(program) {} 
 
         //PassThrough functions for gl equivalents: "glUniform()" calls.
-        void BindVertices(GLuint buffer, size_t size);
-        void BindValue(const string& loc, const float f);
-        void BindValue(const string& loc, const glm::vec2& v);
-        void BindValue(const string& loc, const glm::vec3& v);
-        void BindValue(const string& loc, const glm::mat3x3& m);
+        void BindTexture(const string& loc, GLenum active, const GLuint index) const;
+        void BindVertices(GLuint buffer, size_t size) const;
+        void BindValue(const string& loc, const float f) const;
+        void BindValue(const string& loc, const bool b) const;
+        void BindValue(const string& loc, const glm::vec2& v) const;
+        void BindValue(const string& loc, const glm::vec3& v) const;
+        void BindValue(const string& loc, const glm::mat3x3& m) const;
 
         //TODO: We need to be able to swap framebuffer junk in here.
         //void PushFramebuffer(); ???
 
-        bool Draw(int len);
+        void Draw(const size_t len) const;
 
     private:
         GLuint activeProgram;
