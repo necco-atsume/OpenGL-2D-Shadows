@@ -11,7 +11,9 @@ namespace sp {
     ///DisplayObjects interact with the / through this.
     class RenderContext {
     public:
-        RenderContext(GLuint program) : activeProgram(program) {} 
+        RenderContext(GLuint program) : activeProgram(program) {
+            glUseProgram(program);
+        } 
 
         //PassThrough functions for gl equivalents: "glUniform()" calls.
         void BindTexture(const string& loc, GLenum active, const GLuint index) const;
@@ -21,6 +23,10 @@ namespace sp {
         void BindValue(const string& loc, const glm::vec2& v) const;
         void BindValue(const string& loc, const glm::vec3& v) const;
         void BindValue(const string& loc, const glm::mat3x3& m) const;
+
+        void SetActive() {
+            glUseProgram(activeProgram);
+        }
 
         //TODO: We need to be able to swap framebuffer junk in here.
         //void PushFramebuffer(); ???

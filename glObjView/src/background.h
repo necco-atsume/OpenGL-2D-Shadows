@@ -15,6 +15,7 @@ namespace sp {
         Background(const string& color, const string& normal)
             : Sprite(color, normal) {}
         virtual void Draw(const RenderContext& render);
+        virtual void DrawOcclusion(const RenderContext& render);
     };
 
 }

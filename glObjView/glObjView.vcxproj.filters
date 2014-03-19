@@ -95,10 +95,7 @@
   <ItemGroup>
     <None Include="shaders\sprite.vert" />
     <None Include="shaders\sprite.frag" />
-    <None Include="shaders\shadowblend.frag" />
-    <None Include="shaders\shadowblend.vert" />
     <None Include="shaders\shadowgen.geom" />
-    <None Include="shaders\shadowgen.vert" />
     <None Include="shaders\shadowgen.frag" />
     <None Include="freeglut.dll" />
     <None Include="glew32.dll" />
@@ -108,6 +105,12 @@
     <None Include="libwebp-4.dll" />
     <None Include="SDL2.dll" />
     <None Include="SDL2_image.dll" />
+    <None Include="shaders\shadowcombine.frag" />
+    <None Include="shaders\texturedquad.vert" />
+    <None Include="shaders\finalblend.frag" />
+    <None Include="shaders\lightgen.frag" />
+    <None Include="shaders\lightgen.vert" />
+    <None Include="zlib1.dll" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\nm_cone64x64.png">
@@ -120,6 +123,21 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="resources\cracked_n.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\stone_color.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\stone_normal.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\mtl_o_c.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\mtl_o_n.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\mtl_o_n_e.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

@@ -27,6 +27,7 @@ namespace sp {
         virtual void Dispose();
 
         virtual void Draw(const RenderContext &render);
+        virtual void DrawOcclusion(const RenderContext &render);
 
     protected:
         //Just holds 00 01 10  01 10 11 vertices.  //Transformed by the vs.

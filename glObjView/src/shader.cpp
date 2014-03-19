@@ -48,6 +48,7 @@ namespace sp
         glGetShaderInfoLog(shader, 255, &len, compileResult);
         compileResult[255] = '\0';
 
+        printf("%s:\n", path.c_str());
         if (strcmp(compileResult, "") == 0) {
 #ifdef _WIN32
             strcpy_s(compileResult, 255, "sp::CreateShader: success! :)");

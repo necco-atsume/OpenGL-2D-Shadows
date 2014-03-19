@@ -26,11 +26,11 @@ namespace sp {
         //TODO: void GenerateOcclusionGeometry(); and 
         
         void BeginDraw();
-        void DrawColorLayer(const RenderContext &c);
-        void DrawShadowLayer(const RenderContext &c);
-    protected:
+        void DrawColorLayer(const RenderContext& c);
+        void DrawShadowLayer(const RenderContext& shadow);
+
         vector<IDisplayObject*> objects;
-        vector<Emitter *> lights;
+        vector<Emitter*> lights;
 
     private:
         ///Sorts the emitters by brightness at a given point.
