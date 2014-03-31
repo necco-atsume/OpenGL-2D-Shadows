@@ -6,9 +6,6 @@ This is my chosen CS 419 Shaders final project, and contains some really hacky c
 
 (This probably won't build on other computers; I'll fix that in a bit.)
 
-![Colored Lighting](http://i.imgur.com/4DdpJHH.jpg)
-![Multiple Lights](http://i.imgur.com/WJtty89.jpg)
-![Multiple Visible Shadows](http://i.imgur.com/mjWmXAZ.jpg)
 
 Uses some art from OpenGameArt, and the cobblestone texture from http://kay-vriend.blogspot.com/2013/07/low-res-goodies-cobblestones.html. 
 L to add a light that's a clone of the one under the mouse.
@@ -17,4 +14,9 @@ Left, Right to change the light's radius multiplier (beware: strange effects can
 Press R to randomize light color for the mouse light
 Q,W, A,S, Z,X to change constant linear quadratic falloff. for the mouse light
 
+Screenshots
+---
 
+![Colored Lighting](http://i.imgur.com/4DdpJHH.jpg)
+![Multiple Lights](http://i.imgur.com/WJtty89.jpg)
+![Multiple Visible Shadows](http://i.imgur.com/mjWmXAZ.jpg)
