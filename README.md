@@ -1,7 +1,7 @@
 glShadows
 =========
 
-# Note: This was an old CS university assignment I did, and I don't have any confidence any of the code is useful here. I've posted a little writeup of how this works down at the end of the readme. 
+### Note: This was an old CS university assignment I did, and I don't have any confidence any of the code is useful here. I've posted a little writeup of how this works down at the end of the readme that might be useful though. 
 
 OpenGL 2D normal map / shadow casting demo based loosely on https://github.com/mattdesl/lwjgl-basics/wiki/ShaderLesson6
 This is my chosen CS 419 Shaders final project, and contains some really hacky code, but the shaders should be relatively sane.
