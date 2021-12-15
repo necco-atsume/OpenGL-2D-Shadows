@@ -38,7 +38,7 @@ Create an intermediate framebuffer for the lighting.
 
 For each light in the scene
   For each object in the scene *
-    Using the g-buffer created earlier, draw the normal map pass for this light (insert link to a far smarter person explaining normal mapping here.)
+    Using the g-buffer created earlier, draw the normal map pass for this light (see: https://github.com/mattdesl/lwjgl-basics/wiki/ShaderLesson6)
     Now draw the shadows for each light, first creating the shadow volume** with a geometry shader, then drawing it with a fragment shader.
       - Shadow volume Geometry Shader: (nb: this works on individual triangles)
           - For each point in the triangle, create a new point by pushing the original point outward along the vector that the point and the light make, past the edge of the screen.
