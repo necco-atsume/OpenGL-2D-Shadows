@@ -37,7 +37,6 @@ Draw the normal maps and diffuse color layers to a framebuffer containing both (
 Create an intermediate framebuffer for the lighting.
 
 For each light in the scene
-  For each object in the scene *
     Using the g-buffer created earlier, draw the normal map pass for this light (see: https://github.com/mattdesl/lwjgl-basics/wiki/ShaderLesson6)
     Now draw the shadows for each light, first creating the shadow volume** with a geometry shader, then drawing it with a fragment shader.
       - Shadow volume Geometry Shader: (nb: this works on individual triangles)
